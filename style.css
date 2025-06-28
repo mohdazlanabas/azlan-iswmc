@@ -21,7 +21,7 @@ body {
 }
 
 .animated-title {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
   margin-bottom: 30px;
   animation: toggleVisibility 10s steps(1, end) infinite;
