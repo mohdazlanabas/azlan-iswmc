@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff0000, #ffd700, #1e90ff); /* red, yellow, blue */
+  background-size: 300% 300%;
+  animation: gradientShift 20s ease infinite;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  padding: 20px;
+}
+
+.animated-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: toggleVisibility 10s steps(1, end) infinite;
+  background: linear-gradient(90deg, #ffffff, #ffcc00, #ff0000, #1e90ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: toggleVisibility, titleGradient;
+  animation-duration: 10s, 15s;
+  animation-timing-function: steps(1, end), linear;
+  animation-iteration-count: infinite, infinite;
+}
+
+@keyframes toggleVisibility {
+  0%, 49.9% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes titleGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.video-box video {
+  width: 100%;
+  border: 5px solid #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6),
+              0 0 25px rgba(255, 255, 0, 0.4),
+              0 0 25px rgba(30, 144, 255, 0.4);
+}
